@@ -61,3 +61,5 @@
 1、JTB-Provider日志修改
 2017-08-29
 1、HSE Phase2多RateMode开发
+2017-08-30
+1、HSE Phase2 RoomAmenity开发
