@@ -63,3 +63,5 @@
 1、HSE Phase2多RateMode开发
 2017-08-30
 1、HSE Phase2 RoomAmenity开发
+2017-08-31
+1、HSE Phase2 RoomAmenity开发和测试用例添加
