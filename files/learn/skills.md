@@ -310,7 +310,7 @@
     docker run -e MYSQL_ROOT_PASSWORD=root -v /opt/docker/mysql/data:/var/lib/mysql -v /opt/docker/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -p 127.0.0.1:3306:3306 --restart=always --name mysql -d mysql:latest
 	docker exec -it  mysql1 bash
 	
-    docker run -e MYSQL_ROOT_PASSWORD=root -v /opt/docker/mariadb/data:/var/lib/mysql -v /opt/docker/mariadb/my.cnf:/etc/mysql/my.cnf -p 127.0.0.1:3307:3306  --restart=always --name mariadb -d mariadb:5.5.57
+    docker run -e MYSQL_ROOT_PASSWORD=derbysoft -v /opt/docker/mariadb/data:/var/lib/mysql -v /opt/docker/mariadb/my.cnf:/etc/mysql/my.cnf -p 127.0.0.1:3307:3306  --restart=always --name mariadb -d mariadb:5.5.57
     
 	docker export <CONTAINER ID> > /home/export.tar
 
@@ -1624,7 +1624,7 @@
 	
     docker run -d -v /opt/docker/rancher-server/mysql/:/var/lib/mysql/ --restart=always -p 10.200.176.60:8080:8080 --name rancher-server rancher/server:latest
 	
-	sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /opt/docker/rancher-server/rancher:/var/lib/rancher rancher/agent:v1.2.5 http://10.200.176.60:8080/v1/scripts/C1DE79BD8C2F512DE3D2:1483142400000:25OOJNE4kMFidHOQXEe8lgnefQU
+	sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.6 http://10.200.176.60:8080/v1/scripts/630A119BB8617D12118A:1483142400000:sr51C5WfqjOHj2niTgy8aV9rqQ
 	
 	参考：
 	http://www.linuxidc.com/Linux/2016-04/130603.htm
@@ -1699,7 +1699,14 @@
     参考：
     https://repo.skype.com
 	
+** 47、Docker安装sftp服务**
+
+	docker pull atmoz/sftp:latest
 	
+	docker run -v /home/singhamxiao/Downloads/sftpFiles:/home/sftp/upload -p 10036:22 --restart=always --name sftp -d atmoz/sftp:latest test:test:1001
+	
+	参考：
+	https://github.com/atmoz/sftp
 	
 	
 	
