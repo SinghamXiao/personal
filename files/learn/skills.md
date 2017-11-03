@@ -1624,7 +1624,7 @@
 	
     docker run -d -v /opt/docker/rancher-server/mysql/:/var/lib/mysql/ --restart=always -p 10.200.176.60:8080:8080 --name rancher-server rancher/server:latest
 	
-	sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.6 http://10.200.176.60:8080/v1/scripts/630A119BB8617D12118A:1483142400000:sr51C5WfqjOHj2niTgy8aV9rqQ
+    sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.6 http://10.200.176.60:8080/v1/scripts/DE0544F517864A6E9BEB:1483142400000:OWcURvHyVI9AtaUMF7NWvn295k
 	
 	参考：
 	http://www.linuxidc.com/Linux/2016-04/130603.htm
