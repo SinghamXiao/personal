@@ -12,3 +12,9 @@
 2、HSE升级数据验证
 2017-11-07
 1、HSE perf-log-report request生成
+2017-11-08
+1、HSE perf-log-report request生成
+2、HSE 单元测试添加
+2017-11-09
+1、HSE perf-log-report request生成
+2、HSE 单元测试添加
