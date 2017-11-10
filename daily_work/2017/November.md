@@ -18,3 +18,5 @@
 2017-11-09
 1、HSE perf-log-report request生成
 2、HSE 单元测试添加
+2017-11-10
+1、HSE perf-log-report request生成
