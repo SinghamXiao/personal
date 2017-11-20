@@ -32,3 +32,7 @@
 1、HSE perf-log-report request生成
 2017-11-17
 1、HSE perf-log-report perf log
+2017-11-18-2017-11-19
+1、周末
+2017-11-20
+1、JTBProvider Bug修复和增加按照hotel处理数据
