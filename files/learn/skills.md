@@ -1703,7 +1703,7 @@
 
 	docker pull atmoz/sftp:latest
 	
-	docker run -v /home/singhamxiao/Downloads/sftpFiles:/home/sftp/upload -p 10036:22 --restart=always --name sftp -d atmoz/sftp:latest test:test:1001
+    docker run -v /home/singhamxiao/Downloads/sftpFiles:/home/test/ -p 127.0.0.1:10036:22 --restart=always --name sftp -d atmoz/sftp:latest test:test:1001
 	
 	参考：
 	https://github.com/atmoz/sftp
