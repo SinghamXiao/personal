@@ -36,3 +36,11 @@
 1、周末
 2017-11-20
 1、JTBProvider Bug修复和增加按照hotel处理数据
+2017-11-21
+1、HSE发布
+2、UT测试用例添加
+2017-11-22
+1、UT测试用例添加
+2、JTBProvider Bug查找和修复
+2017-11-23
+1、HSE perf-log-report Web pages修改
