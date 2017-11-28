@@ -49,3 +49,9 @@
 2、Spring MVC学习
 2017-11-25-2017-11-26
 1、周末
+2017-11-27
+1、JTBProvider Adapter新需求讨论
+2、JTBProvider Adapter新功能开发
+2017-11-28
+1、JTBProvider Processor新功能开发
+2、HSE Endpoint UT添加
