@@ -55,3 +55,6 @@
 2017-11-28
 1、JTBProvider Processor新功能开发
 2、HSE Endpoint UT添加
+2017-11-29
+1、JTBProvider Processor新功能开发
+2、HSE Endpoint UT添加
