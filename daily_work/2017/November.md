@@ -50,11 +50,14 @@
 2017-11-25-2017-11-26
 1、周末
 2017-11-27
-1、JTBProvider Adapter新需求讨论
-2、JTBProvider Adapter新功能开发
+1、JTBProvider Adapter 新需求讨论
+2、JTBProvider Adapter 新功能开发
 2017-11-28
-1、JTBProvider Processor新功能开发
+1、JTBProvider Adapter 新功能开发
 2、HSE Endpoint UT添加
 2017-11-29
-1、JTBProvider Processor新功能开发
+1、JTBProvider Adapter 新功能开发
 2、HSE Endpoint UT添加
+2017-11-30
+1、JTBProvider Adapter 新功能开发
+2、JTBProvider Adapter UT添加
