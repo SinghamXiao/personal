@@ -15,3 +15,10 @@
 1、FlightCentre-Supplier项目新需求学习
 2、JTBProvider Adapter Bug修改
 3、FlightCentre-Supplier项目新需求澄清会
+2017-12-07
+1、FlightCentre-Supplier项目学习
+2017-12-08
+1、FlightCentre-Supplier项目学习
+2、各种会议
+2017-12-09--2017-12-10
+1、周末
