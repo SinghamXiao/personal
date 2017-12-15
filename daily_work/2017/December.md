@@ -22,3 +22,19 @@
 2、各种会议
 2017-12-09--2017-12-10
 1、周末
+2017-12-11
+1、FlightCentre-Supplier项目学习
+2、会议
+2017-12-12
+1、FlightCentre-Supplier项目学习
+2、会议
+2017-12-13
+1、FlightCentre-Supplier项目学习
+2、Hilton CancelPenalty不一致排查
+2017-12-14
+1、FlightCentre-Supplier项目开发
+2、Hilton CancelPenalty不一致排查
+2017-12-15
+1、FlightCentre-Supplier项目开发
+2017-12-16--2017-12-17
+1、周末
