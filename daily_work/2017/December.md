@@ -40,3 +40,12 @@
 1、周末
 2017-12-18
 1、FlightCentre-Supplier项目开发 -- log模块开发
+2017-12-19
+1、FlightCentre-Supplier项目开发 -- log模块开发
+2017-12-20
+1、FlightCentre-Supplier项目开发 -- log模块开发
+2、JTB-Adapter Log整理
+2017-12-21
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2017-12-22
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
