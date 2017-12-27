@@ -49,3 +49,13 @@
 1、FlightCentre-Supplier项目开发 -- getAvail模块开发
 2017-12-22
 1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2017-12-23--2017-12-24
+1、周末
+2017-12-25
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2017-12-26
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2017-12-27
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2、HSE Bug修复
+3、JTB Bug修复
