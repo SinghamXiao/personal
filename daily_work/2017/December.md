@@ -59,3 +59,7 @@
 1、FlightCentre-Supplier项目开发 -- getAvail模块开发
 2、HSE Bug修复
 3、JTB Bug修复
+2017-12-27
+1、FlightCentre-Supplier项目开发 -- getAvail模块开发
+2、HSE 升级
+3、JTB Bug修复和第三方依赖包整理
