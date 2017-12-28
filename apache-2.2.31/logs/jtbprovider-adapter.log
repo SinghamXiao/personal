@@ -1,0 +1,732 @@
+11:07:58.719 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+11:07:58.720 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 7b4f5504656bd5cd.7b4f5504656bd5cd<:7b4f5504656bd5cd
+11:07:58.721 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 7b4f5504656bd5cd.7b4f5504656bd5cd<:7b4f5504656bd5cd
+ errorStackTrace:
+
+
+11:07:58.772 ERROR c.d.d.r.c.Client:56-b1fc3ac3182f43b3b646f76f6dfdd7c7: jtbprovider_1 -PROVIDER
+11:07:58.774 ERROR c.d.d.r.c.Client:57-b1fc3ac3182f43b3b646f76f6dfdd7c7:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 9ceaff36877bf7ed.9ceaff36877bf7ed<:9ceaff36877bf7ed
+11:07:58.775 ERROR c.d.d.r.c.Client:58-b1fc3ac3182f43b3b646f76f6dfdd7c7:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 9ceaff36877bf7ed.9ceaff36877bf7ed<:9ceaff36877bf7ed
+ errorStackTrace:
+
+
+11:07:59.023 ERROR c.d.d.r.c.Client:56-DHC27110707000.BOOK_T_71313e4b1cd8426c8a1b08e2fc28bb4c:Channel_Test-PROVIDER
+11:07:59.024 ERROR c.d.d.r.c.Client:57-DHC27110707000.BOOK_T_71313e4b1cd8426c8a1b08e2fc28bb4c:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: fabf22b17068a6c3.fabf22b17068a6c3<:fabf22b17068a6c3
+11:07:59.024 ERROR c.d.d.r.c.Client:58-DHC27110707000.BOOK_T_71313e4b1cd8426c8a1b08e2fc28bb4c:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: fabf22b17068a6c3.fabf22b17068a6c3<:fabf22b17068a6c3
+ errorStackTrace:
+
+
+11:07:59.032 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+11:07:59.069 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:07:59.092 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+11:07:59.094 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+11:07:59.545 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:07:59.906 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+11:08:00.243 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+11:08:00.386 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+11:08:00.484 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!
+11:10:44.441 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+11:10:44.443 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: a4cc915ff0a3360f.a4cc915ff0a3360f<:a4cc915ff0a3360f
+11:10:44.444 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: a4cc915ff0a3360f.a4cc915ff0a3360f<:a4cc915ff0a3360f
+ errorStackTrace:
+
+
+11:10:44.500 ERROR c.d.d.r.c.Client:56-193988ae773d4acbb11c5f1383badddb: jtbprovider_1 -PROVIDER
+11:10:44.501 ERROR c.d.d.r.c.Client:57-193988ae773d4acbb11c5f1383badddb:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 6a99b06ee3bb499a.6a99b06ee3bb499a<:6a99b06ee3bb499a
+11:10:44.501 ERROR c.d.d.r.c.Client:58-193988ae773d4acbb11c5f1383badddb:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 6a99b06ee3bb499a.6a99b06ee3bb499a<:6a99b06ee3bb499a
+ errorStackTrace:
+
+
+11:10:44.813 ERROR c.d.d.r.c.Client:56-DHC271110LZ000.BOOK_T_e0750ec7ea274bfd8da0df1510be274c:Channel_Test-PROVIDER
+11:10:44.813 ERROR c.d.d.r.c.Client:57-DHC271110LZ000.BOOK_T_e0750ec7ea274bfd8da0df1510be274c:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: d814fe1d17a5d3e5.d814fe1d17a5d3e5<:d814fe1d17a5d3e5
+11:10:44.813 ERROR c.d.d.r.c.Client:58-DHC271110LZ000.BOOK_T_e0750ec7ea274bfd8da0df1510be274c:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: d814fe1d17a5d3e5.d814fe1d17a5d3e5<:d814fe1d17a5d3e5
+ errorStackTrace:
+
+
+11:10:44.825 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+11:10:44.867 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:10:44.894 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+11:10:44.902 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+11:10:45.441 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:10:45.827 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+11:10:46.154 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+11:10:46.306 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+11:10:46.405 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!
+11:17:49.499 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+11:17:49.501 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 0e1120159244fd3c.0e1120159244fd3c<:0e1120159244fd3c
+11:17:49.501 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 0e1120159244fd3c.0e1120159244fd3c<:0e1120159244fd3c
+ errorStackTrace:
+
+
+11:17:49.576 ERROR c.d.d.r.c.Client:56-cedc6df3739044388597052cc73ceec4: jtbprovider_1 -PROVIDER
+11:17:49.577 ERROR c.d.d.r.c.Client:57-cedc6df3739044388597052cc73ceec4:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: e61fa05a6bda326e.e61fa05a6bda326e<:e61fa05a6bda326e
+11:17:49.577 ERROR c.d.d.r.c.Client:58-cedc6df3739044388597052cc73ceec4:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: e61fa05a6bda326e.e61fa05a6bda326e<:e61fa05a6bda326e
+ errorStackTrace:
+
+
+11:17:49.891 ERROR c.d.d.r.c.Client:56-DHC271117O5000.BOOK_T_f0275c3d066c4b0b806676c488e03cbf:Channel_Test-PROVIDER
+11:17:49.891 ERROR c.d.d.r.c.Client:57-DHC271117O5000.BOOK_T_f0275c3d066c4b0b806676c488e03cbf:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2b8f48c31b5c0cae.2b8f48c31b5c0cae<:2b8f48c31b5c0cae
+11:17:49.892 ERROR c.d.d.r.c.Client:58-DHC271117O5000.BOOK_T_f0275c3d066c4b0b806676c488e03cbf:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2b8f48c31b5c0cae.2b8f48c31b5c0cae<:2b8f48c31b5c0cae
+ errorStackTrace:
+
+
+11:17:49.904 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+11:17:49.943 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:17:49.969 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+11:17:49.972 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+11:17:50.474 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:17:50.876 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+11:17:51.239 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+11:17:51.386 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+11:17:51.483 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!
+11:27:28.196 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+11:27:28.198 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 3ab9108dc08d1879.3ab9108dc08d1879<:3ab9108dc08d1879
+11:27:28.200 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 3ab9108dc08d1879.3ab9108dc08d1879<:3ab9108dc08d1879
+ errorStackTrace:
+
+
+11:27:28.249 ERROR c.d.d.r.c.Client:56-3ec3fe34205d4c0290bba6bd53b0faea: jtbprovider_1 -PROVIDER
+11:27:28.251 ERROR c.d.d.r.c.Client:57-3ec3fe34205d4c0290bba6bd53b0faea:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 0a539d2f0f64f057.0a539d2f0f64f057<:0a539d2f0f64f057
+11:27:28.252 ERROR c.d.d.r.c.Client:58-3ec3fe34205d4c0290bba6bd53b0faea:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 0a539d2f0f64f057.0a539d2f0f64f057<:0a539d2f0f64f057
+ errorStackTrace:
+
+
+11:27:28.500 ERROR c.d.d.r.c.Client:56-DHC271127DB000.BOOK_T_fa30deea8ea343068654a2ec4641ed03:Channel_Test-PROVIDER
+11:27:28.500 ERROR c.d.d.r.c.Client:57-DHC271127DB000.BOOK_T_fa30deea8ea343068654a2ec4641ed03:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: da31b72a4f54ba3f.da31b72a4f54ba3f<:da31b72a4f54ba3f
+11:27:28.500 ERROR c.d.d.r.c.Client:58-DHC271127DB000.BOOK_T_fa30deea8ea343068654a2ec4641ed03:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: da31b72a4f54ba3f.da31b72a4f54ba3f<:da31b72a4f54ba3f
+ errorStackTrace:
+
+
+11:27:28.506 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+11:27:28.540 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:27:28.564 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+11:27:28.566 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+11:27:28.936 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+11:27:29.314 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+11:27:29.653 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+11:27:29.785 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+11:27:29.869 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!
+12:13:30.023 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+12:13:30.024 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2cc198de561283e5.2cc198de561283e5<:2cc198de561283e5
+12:13:30.025 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2cc198de561283e5.2cc198de561283e5<:2cc198de561283e5
+ errorStackTrace:
+
+
+12:13:30.076 ERROR c.d.d.r.c.Client:56-77213ac216224bee9ac710a823b2ac6a: jtbprovider_1 -PROVIDER
+12:13:30.078 ERROR c.d.d.r.c.Client:57-77213ac216224bee9ac710a823b2ac6a:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: d84e04b635da6b27.d84e04b635da6b27<:d84e04b635da6b27
+12:13:30.078 ERROR c.d.d.r.c.Client:58-77213ac216224bee9ac710a823b2ac6a:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: d84e04b635da6b27.d84e04b635da6b27<:d84e04b635da6b27
+ errorStackTrace:
+
+
+12:13:30.340 ERROR c.d.d.r.c.Client:56-DHC27121390000.BOOK_T_3e5941af984046578e98226b1effa3bf:Channel_Test-PROVIDER
+12:13:30.341 ERROR c.d.d.r.c.Client:57-DHC27121390000.BOOK_T_3e5941af984046578e98226b1effa3bf:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 9abb3644df0a2a01.9abb3644df0a2a01<:9abb3644df0a2a01
+12:13:30.341 ERROR c.d.d.r.c.Client:58-DHC27121390000.BOOK_T_3e5941af984046578e98226b1effa3bf:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 9abb3644df0a2a01.9abb3644df0a2a01<:9abb3644df0a2a01
+ errorStackTrace:
+
+
+12:13:30.347 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+12:13:30.381 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+12:13:30.404 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+12:13:30.412 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+12:13:30.814 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+12:13:31.152 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+12:13:31.461 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+12:13:31.616 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+12:13:31.700 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!
+14:06:52.853 ERROR c.d.d.r.c.Client:56-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd: Channel_Test-PROVIDER
+14:06:52.854 ERROR c.d.d.r.c.Client:57-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: a592a2817de14262.a592a2817de14262<:a592a2817de14262
+14:06:52.855 ERROR c.d.d.r.c.Client:58-DH614163686000.CANCEL_T_3d1e115878c4400a8bf15c6022e659dd:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: a592a2817de14262.a592a2817de14262<:a592a2817de14262
+ errorStackTrace:
+
+
+14:06:52.907 ERROR c.d.d.r.c.Client:56-abb08e66c9974d06b364cf89f0d3efb3: jtbprovider_1 -PROVIDER
+14:06:52.909 ERROR c.d.d.r.c.Client:57-abb08e66c9974d06b364cf89f0d3efb3:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: fa3eee2e68a236ca.fa3eee2e68a236ca<:fa3eee2e68a236ca
+14:06:52.910 ERROR c.d.d.r.c.Client:58-abb08e66c9974d06b364cf89f0d3efb3:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: fa3eee2e68a236ca.fa3eee2e68a236ca<:fa3eee2e68a236ca
+ errorStackTrace:
+
+
+14:06:53.162 ERROR c.d.d.r.c.Client:56-DHC27140641000.BOOK_T_19edc2408fc04e88ab96ff8a522be17c:Channel_Test-PROVIDER
+14:06:53.162 ERROR c.d.d.r.c.Client:57-DHC27140641000.BOOK_T_19edc2408fc04e88ab96ff8a522be17c:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2f2da2d66cbb66e6.2f2da2d66cbb66e6<:2f2da2d66cbb66e6
+14:06:53.162 ERROR c.d.d.r.c.Client:58-DHC27140641000.BOOK_T_19edc2408fc04e88ab96ff8a522be17c:errorMessage:
+com.twitter.finagle.FailedFastException:Endpoint client is marked down. For more details see: https://twitter.github.io/finagle/guide/FAQ.html#why-do-clients-see-com-twitter-finagle-failedfastexception-s. Remote Info: Upstream Address: Not Available, Upstream Client Id: Not Available, Downstream Address: localhost/127.0.0.1:9002, Downstream Client Id: client, Trace Id: 2f2da2d66cbb66e6.2f2da2d66cbb66e6<:2f2da2d66cbb66e6
+ errorStackTrace:
+
+
+14:06:53.168 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:39-com.derbysoft.dswitch.remote.hotel.exception.InvalidFieldException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testAbstractCodeException(HotelReservationRemoteServiceImplTest.java:49)
+14:06:53.200 ERROR c.d.j.p.a.r.HotelReservationRemoteServiceImpl:43-java.lang.NullPointerException: For Test
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.sun.proxy.$Proxy9.makeRes(Unknown Source)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImpl.makeReservation(HotelReservationRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelReservationRemoteServiceImplTest.testSystemException(HotelReservationRemoteServiceImplTest.java:63)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+14:06:53.224 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:40-java.lang.RuntimeException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithException(HotelAvailabilityRemoteServiceImplTest.java:62)
+14:06:53.227 ERROR c.d.j.p.a.r.HotelAvailabilityRemoteServiceImpl:37-com.derbysoft.dswitch.remote.hotel.exception.HotelNotFoundException: hotel
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImpl.getNoCachedAvailability(HotelAvailabilityRemoteServiceImpl.java:35)
+	at com.derbysoft.jtb.provider.adapter.remote.HotelAvailabilityRemoteServiceImplTest.getNoCachedAvailabilityWithAbstractCodeException(HotelAvailabilityRemoteServiceImplTest.java:54)
+14:06:53.628 ERROR c.d.j.p.a.l.StreamLogInterceptor:63-java.lang.NullPointerException
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.getMessageContent(StreamLogInterceptor.java:60)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.saveLog(StreamLogInterceptor.java:47)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptor.handleRequest(StreamLogInterceptor.java:28)
+	at com.derbysoft.jtb.provider.adapter.log.StreamLogInterceptorTest.handleRequestWithException(StreamLogInterceptorTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:119)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at com.sun.proxy.$Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+
+14:06:53.956 ERROR c.d.j.p.a.t.HotelAvailRequestTranslator:60-CCS Not Configured Hotel: hotel1
+14:06:54.264 ERROR c.d.j.p.a.s.HotelCancelServiceImpl:58-org.springframework.ws.client.WebServiceIOException: I/O error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImpl.cancelReservation(HotelCancelServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelCancelServiceImplTest.testCanceledReservationWithWebServiceIOException(HotelCancelServiceImplTest.java:75)
+14:06:54.403 ERROR c.d.j.p.a.s.HotelNoCachedAvailabilityServiceImpl:58-org.springframework.ws.client.WebServiceIOException: error
+	at org.easymock.internal.MockInvocationHandler.invoke(MockInvocationHandler.java:46)
+	at org.easymock.internal.ObjectMethodsFilter.invoke(ObjectMethodsFilter.java:94)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImpl.getAvail(HotelNoCachedAvailabilityServiceImpl.java:55)
+	at com.derbysoft.jtb.provider.adapter.service.HotelNoCachedAvailabilityServiceImplTest.getAvailThrowException(HotelNoCachedAvailabilityServiceImplTest.java:80)
+14:06:54.497 ERROR c.d.j.p.a.s.AvailPOSServiceImpl:31-Channel Code [code] Invalid / CCS Not Configured!

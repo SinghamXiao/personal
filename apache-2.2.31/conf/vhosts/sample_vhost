@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    DocumentRoot /usr/local/webapps/WEBDIR/
+    <Directory "/usr/local/webapps/WEBDIR/">
+        Options Indexes
+        AllowOverride None
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ServerName DOMAIN
+    ServerAlias www.DOMAIN
+    LogLevel warn
+    ErrorLog /usr/local/logs/web/WEBDIR-error_log
+    CustomLog "||/usr/sbin/cronolog --link=/usr/local/logs/WEBDIR-access_log /usr/local/logs/WEBDIR-access_log.%Y%m%d" combinedderby
+</VirtualHost>

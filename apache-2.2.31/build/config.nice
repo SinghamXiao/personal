@@ -1,0 +1,44 @@
+#! /bin/sh
+#
+# Created by configure
+
+CFLAGS="-O2 -fomit-frame-pointer -mtune=core2 -mmmx -msse -msse2 -mssse3 -msse4 -m64 -minline-stringops-dynamically -maccumulate-outgoing-args -m128bit-long-double -fpic -pipe -fstack-check -Wa,--64,-march=core2"; export CFLAGS
+LDFLAGS="-s -Wl,-O2"; export LDFLAGS
+"./configure" \
+"--prefix=/usr/local/platform/apache-2.2.31" \
+"--enable-alias=static" \
+"--enable-authz-host=static" \
+"--enable-dir=static" \
+"--enable-log_config=static" \
+"--enable-mime_magic=static" \
+"--enable-reqtimeout=static" \
+"--enable-rewrite=static" \
+"--enable-mods-shared=all" \
+"--enable-authn_alias=shared" \
+"--enable-cache=shared" \
+"--enable-cgi=shared" \
+"--enable-charset_lite=shared" \
+"--enable-dav_lock=shared" \
+"--enable-disk_cache=shared" \
+"--enable-echo=shared" \
+"--enable-example=shared" \
+"--enable-file_cache=shared" \
+"--enable-isapi=shared" \
+"--enable-mem_cache=shared" \
+"--enable-nw_ssl=shared" \
+"--enable-proxy=shared" \
+"--enable-proxy_ajp=shared" \
+"--enable-proxy_balancer=shared" \
+"--enable-proxy_connect=shared" \
+"--enable-proxy_ftp=shared" \
+"--enable-proxy_http=shared" \
+"--enable-proxy_scgi=shared" \
+"--enable-ssl=shared" \
+"--enable-suexec=shared" \
+"--with-apr=/usr/local/platform/apr" \
+"--with-apr-util=/usr/local/platform/apr-util" \
+"--with-ssl=/usr/local/platform/openssl" \
+"--with-mpm=worker" \
+"CFLAGS=-O2 -fomit-frame-pointer -mtune=core2 -mmmx -msse -msse2 -mssse3 -msse4 -m64 -minline-stringops-dynamically -maccumulate-outgoing-args -m128bit-long-double -fpic -pipe -fstack-check -Wa,--64,-march=core2" \
+"LDFLAGS=-s -Wl,-O2" \
+"$@"
