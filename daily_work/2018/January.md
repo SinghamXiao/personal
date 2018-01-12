@@ -13,3 +13,14 @@
 2018-01-08
 1、FlightCentre-Supplier项目开发 -- makeReservation接口开发
 2、请假半天
+2018-01-09
+1、FlightCentre-Supplier项目开发 -- cancelReservation接口开发
+2018-01-10
+1、FlightCentre-Supplier项目开发 -- makeReservation接口开发
+2018-01-11
+1、FlightCentre-Supplier项目开发 -- 并发处理
+2、FlightCentre-Supplier项目开发 -- cancelPolicyTranslator接口开发
+2018-01-12
+1、FlightCentre-Supplier项目开发 -- cancelPolicyTranslator接口开发
+2018-01-13 -- 2018-01-14
+1、周末
