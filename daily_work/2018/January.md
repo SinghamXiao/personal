@@ -24,3 +24,10 @@
 1、FlightCentre-Supplier项目开发 -- cancelPolicyTranslator接口开发
 2018-01-13 -- 2018-01-14
 1、周末
+2018-01-15
+1、FlightCentre-Supplier项目开发 -- cancelPolicyTranslator接口开发
+2、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- Enquiry Total Price From FlightCentre
+3、重构
+2018-01-16
+1、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- translate CreateBookingRS
+3、重构
