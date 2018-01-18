@@ -30,4 +30,7 @@
 3、重构
 2018-01-16
 1、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- translate CreateBookingRS
-3、重构
+2、重构
+2018-01-17
+1、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- translate CreateBookingRS
+2、架构设计讨论会
