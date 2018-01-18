@@ -18,7 +18,7 @@
             
             goroutine就是一段代码，一个函数入口，以及在堆上为其分配的一个堆栈。所以它非常廉价，我们可以很轻松的创建上万个goroutine，但它们并不是被操作系统所调度执行。
             
-            runtime。GOMAXPROCS(runtime。NumCPU()) // go version >=1。5的时候， GOMAXPROCS的默认值就是go程序启动时可见的操作系统认为的CPU个数。
+            runtime。GOMAXPROCS(runtime。NumCPU()) // go version>=1.5的时候，GOMAXPROCS的默认值就是go程序启动时可见的操作系统认为的CPU个数。
             
             注意：在go程序中使用的操作系统线程数量包括：正服务于cgo calls的线程，阻塞于操作系统calls的线程，所以go程序中使用的操作系统线程数量可能大于GOMAXPROCS的值。
             
@@ -154,3 +154,11 @@
                 所以为了保持运行Go代码，一个P能够从全局运行队列中获取G，但是如果全局运行队列中也没有G了，那么P就不得不从其它Pn的运行队列获取G了。
                 
                 当一个P完成自己的任务后，它就会尝试“盗取”另一个P运行队列中G的一半。这将确保每个P总是有活干，然后反过来确保所有线程M尽可能处于最大负荷。
+                
+            备注：goroutine是按照抢占式调度的，一个goroutine最多执行10ms就会换作下一个。
+            
+                这个和目前主流系统的的cpu调度类似（按照时间分片）
+                
+                windows：20ms
+                
+                linux：5ms－800ms
