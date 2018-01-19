@@ -36,3 +36,9 @@
 2、架构设计讨论会
 2018-01-18
 1、FlightCentre-Supplier项目开发 -- web pages
+2018-01-19
+1、FlightCentre-Supplier项目开发 -- 重构webservice
+2、Spring WS Client / Server开发学习
+3、Golang 学习之锁和垃圾回收和interface的使用
+2018-01-20 -- 2018-01-21
+1、周末
