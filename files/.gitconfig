@@ -1,0 +1,9 @@
+[http]
+	sslVerify = false
+[user]
+	name = singham.yuan
+	email = singham.yuan@derbysoft.com
+[push]
+	default = simple
+[core]
+	autocrlf = input
