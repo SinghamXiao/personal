@@ -1,25 +1,41 @@
 ## Linux-Ubuntu系统使用总结  ##
 
-**1、系统版本ubuntu16.04-x86_64**
+**1、系统版本Ubuntuxx.xx-x86_64**
 	
-	http://releases.ubuntu.com/16.04/
-
 	sudo adduser 用户名 sudo
 
-	ubuntu 终端显示路径太长
+	Ubuntu终端显示路径太长
 	
-	sudo vim ~/.bashrc
-
-	这个文件记录了用户终端配置
-
-	找到
-
-	if [ "$color_prompt " = yes ]; then
-		PS1 ='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W \[\033[00m\]\$ '
-	else
-		PS1 ='${debian_chroot:+($debian_chroot)}\u@\h:\W \$ '
-
-	将蓝色的w由小写改成大写，可以表示只显示当前目录名称
+        sudo vim ~/.bashrc
+    
+        这个文件记录了用户终端配置
+    
+        找到
+    
+        if [ "$color_prompt " = yes ]; then
+            PS1 ='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W \[\033[00m\]\$ '
+        else
+            PS1 ='${debian_chroot:+($debian_chroot)}\u@\h:\W \$ '
+    
+        将蓝色的w由小写改成大写，可以表示只显示当前目录名称
+        
+    Ubuntu终端显示 Git 当前所在分支
+    
+        sudo vim ~/.bashrc
+        
+        结尾添加：
+        
+        function git_branch {
+          branch="`git branch 2>/dev/null | grep "^\*" | sed -e "s/^\*\ //"`"
+          if [ "${branch}" != "" ];then
+              if [ "${branch}" = "(no branch)" ];then
+                  branch="(`git rev-parse --short HEAD`...)"
+              fi
+              echo " ($branch)"
+          fi
+        }
+        
+        export PS1='\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ '
 	
 **2、配置IP、DNS及网络代理**
 
