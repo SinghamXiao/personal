@@ -52,3 +52,8 @@
 1、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- translate Passengers
 2018-01-26
 1、FlightCentre-Supplier项目开发 -- makeReservation接口开发 -- translate Passengers
+2018-01-27 -- 2018-01-28
+1、周末
+2018-01-29
+1、FlightCentre-Supplier项目开发 -- Bug修改
+2、FlightCentre-Supplier项目开发 -- add web pages for list reservation
