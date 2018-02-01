@@ -1724,9 +1724,14 @@
 	参考：
 	https://github.com/atmoz/sftp
 	
+** 48、Docker安装Tomcat服务**
 	
-	
-	
+	docker run -v /opt/docker/tomcat/webapps:/usr/local/tomcat/webapps -p 127.0.0.1:80:8080 --privileged=true --restart=always --name tomcat -d tomcat:latest 
+    
+    未完待续。。。。。。
+    
+    参考：
+    https://www.w3cschool.cn/docker/docker-install-tomcat.html
 	
 	
 	
