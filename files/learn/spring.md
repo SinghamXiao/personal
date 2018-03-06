@@ -94,12 +94,19 @@
 	
 		Endpoint:	Indicates that an annotated class is an "Endpoint" (e.g. a web service endpoint)
 	
-		PayloadRoot:	Marks an endpoint method as the handler for an incoming request
+		PayloadRoot:    Marks an endpoint method as the handler for an incoming request
 	
 		XPathParam:	Indicates that a method parameter should be bound to an XPath expression
 	
+	Spring框架四大原则：
 	
-	
+	    1、使用POJO进行轻量级和最小侵入式开发。
+	    
+	    2、通过依赖注入和基于接口编程实现松耦合。
+	    
+	    3、通过AOP和默认习惯进行声明式编程。
+	    
+	    4、使用AOP和模板减少模式化代码。
 	
 	参考：
 	http://blog.csdn.net/qq_22654611/article/details/52606960
