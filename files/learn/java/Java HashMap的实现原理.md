@@ -291,13 +291,19 @@
     
         上面的讨论中对于红黑树并没有深入分析，HashMap的数据存储中主要有两种场景用到红黑树的操作：
         
-            1. 当满足一定条件（条件2，见上文）时，单链表内的数据会转换为红黑树存储（见代码片段2：treeifyBin()）。
+            场景1. 当满足一定条件（条件2，见上文）时，单链表内的数据会转换为红黑树存储（见代码片段2：treeifyBin()）。
             
-            2. 当HashMap桶结构由链表转换为红黑树后，再往里put数据将变成往红黑树插入 / 更新数据，这和链表又不太一样了。
+            场景2. 当HashMap桶结构由链表转换为红黑树后，再往里put数据将变成往红黑树插入 / 更新数据，这和链表又不太一样了。
         
         下面进行逐一详细分析：
         
-        未完待续。。。。。。
+            场景1:
+             
+                代码片段2：treeifyBin()树形化函数完成的第一件事是将单链表的Node节点转换为红黑树TreeNode节点，然后将其首位相连，并将桶指向红黑树的头结点。
+                
+                其实此时所谓的红黑树只是一个双向链表，并不严格意义上的红黑树结构！！！ 因为此时每个节点只有prev和next有值，那么接着就需要对这个双向链表树形化将其塑造成一个标准的红黑树。
+                
+                
             
     源码片段1：
         
@@ -371,16 +377,21 @@
         }
         
     源码片段2：
-    
+        
+        //将桶内所有的 链表节点 替换成 红黑树节点
         final void treeifyBin(Node<K,V>[] tab, int hash) {
             int n, index; Node<K,V> e;
+            //如果当前哈希表为空，或者哈希表中元素的个数小于进行树形化的阈值(默认为64)，就去新建/扩容
             if (tab == null || (n = tab.length) < MIN_TREEIFY_CAPACITY)
                 resize();
             else if ((e = tab[index = (n - 1) & hash]) != null) {
-                TreeNode<K,V> hd = null, tl = null;
+                // 如果哈希表中的元素个数超过了 树形化阈值，进行树形化
+                // e 是哈希表中指定位置桶里的链表节点，从头结点开始
+                TreeNode<K,V> hd = null, tl = null; // 红黑树的头、尾节点
                 do {
+                    // 新建一个红黑树节点，内容和当前链表节点e一致
                     TreeNode<K,V> p = replacementTreeNode(e, null);
-                    if (tl == null)
+                    if (tl == null)// 确定红黑树头节点
                         hd = p;
                     else {
                         p.prev = tl;
@@ -388,6 +399,7 @@
                     }
                     tl = p;
                 } while ((e = e.next) != null);
+                // 让桶的第一个元素指向新建的红黑树头结点，以后这个桶里的元素就是红黑树而不是链表了
                 if ((tab[index] = hd) != null)
                     hd.treeify(tab);
             }
