@@ -141,3 +141,7 @@
         2. https://www.cnblogs.com/xiaoxi/p/6089984.html
         
         3. https://segmentfault.com/a/1190000008934023
+        
+        4. http://tutorials.jenkov.com/java-collections/index.html
+        
+        5. http://ifeve.com/java-collections/
