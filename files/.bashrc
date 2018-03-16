@@ -130,7 +130,7 @@ function git_branch {
 export PS1='\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ '
 
 # environment
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_162
 export JRE_HOME=${JAVA_HOME}/jre
 export M2_HOME=/opt/apache-maven-3.5.0
 export GOBIN=/home/singhamxiao/projects/go/bin
