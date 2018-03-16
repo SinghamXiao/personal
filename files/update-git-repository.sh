@@ -2,21 +2,22 @@
 
 gitPull(){
     echo "git pull"
-    git pull
+#    git pull
 }
 
 
 function getDir(){
     echo "path: "$1
-    for fileName in `ls  $1`
+    cd $1
+    for fileName in `ls -a $1`
         do
             if [ ${fileName} == ".git" ];then
                 gitPull
-            elif [ -d $fileName ] && [ ${fileName} != "." -a ${fileName} != ".." ];then
-                echo ${fileName}
+            elif [ -d ${fileName} ] && [ ${fileName} != "." -a ${fileName} != ".." ];then
                 getDir $1"/"${fileName}
             fi
         done
+    cd ../
 }
 
 #read -p "Please input a ${path}: " ${path}
