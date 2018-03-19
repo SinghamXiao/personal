@@ -3,8 +3,21 @@ package test;
 import main.java.test.H;
 
 import java.util.HashMap;
+import java.util.Vector;
 
 public class Test {
+
+    String f;
+
+    public Test() {
+        super();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        System.gc();
+    }
 
     public static void main(String[] args) {
         for (int i = 0; i < args.length; i++) {
@@ -68,6 +81,7 @@ public class Test {
         System.out.println(map.put("a", "AA"));
         System.out.println(map.put("a", "AB"));
         map.clear();
+
     }
 
 
