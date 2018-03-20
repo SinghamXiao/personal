@@ -82,6 +82,12 @@ public class Test {
         System.out.println(map.put("a", "AB"));
         map.clear();
 
+        String str1= new StringBuffer("go").append("to").toString();
+        System.out.println(str1.intern() == str1);
+
+        String str2= new StringBuffer("go").append("to").toString();
+        System.out.println(str2.intern() == str2);
+
     }
 
 
