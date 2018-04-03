@@ -134,6 +134,9 @@
 	在. /etc/X11/Xsession 前一行插入
 	xfce4-session
 	
+	
+	sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
+	
 	sudo service xrdp restart
 
 	xfce图形界面远程连接有个优点，就是每次重新建立远程链接的话就会新建一个xfce的图形
@@ -175,6 +178,10 @@
 	窗口管理器，或在终端中输入xfwm4-settings打开也行（xfwm4就是xfce4 window 
 	manger的缩写），选择键盘，可以看到窗口快捷键中动作一列有“切换同一应用程序的窗
 	口”选项，将该选项的快捷键清除后关闭窗口即可解决问题。
+	
+	参考资料：
+	
+	    1. http://c-nergy.be/blog/?p=11336
 
 **5、安装subversion/git**
 
