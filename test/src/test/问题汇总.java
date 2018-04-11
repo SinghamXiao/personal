@@ -1,5 +1,5 @@
 /*
-package main.java.test;
+package test;
 
 import com.derbysoft.common.util.collect.Lists;
 import org.junit.Test;

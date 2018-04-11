@@ -1,9 +1,8 @@
 package test;
 
-import main.java.test.H;
+import main.java.H;
 
 import java.util.HashMap;
-import java.util.Vector;
 
 public class Test {
 
@@ -70,10 +69,10 @@ public class Test {
         System.out.println(hashMap.get(d));
 
         System.out.println("----------");
-        System.out.println(4&(16-1));
-        System.out.println(4&(32-1));
-        System.out.println(4&(64-1));
-        System.out.println(4&(128-1));
+        System.out.println(4 & (16 - 1));
+        System.out.println(4 & (32 - 1));
+        System.out.println(4 & (64 - 1));
+        System.out.println(4 & (128 - 1));
 
 
         HashMap<String, String> map = new HashMap<String, String>();
@@ -82,11 +81,15 @@ public class Test {
         System.out.println(map.put("a", "AB"));
         map.clear();
 
-        String str1= new StringBuffer("go").append("to").toString();
+        String str1 = new StringBuffer("go").append("to").toString();
         System.out.println(str1.intern() == str1);
 
-        String str2= new StringBuffer("go").append("to").toString();
+        String str2 = new StringBuffer("go").append("to").toString();
         System.out.println(str2.intern() == str2);
+
+        StringBuilder builder = new StringBuilder();
+
+        System.out.println("Test " + a.toString());
 
     }
 

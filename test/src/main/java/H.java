@@ -1,4 +1,4 @@
-package com.singham.yuan.ws.test.test;
+package main.java;
 
 public class H {
 
@@ -13,4 +13,8 @@ public class H {
         return 10;
     }
 
+    @Override
+    public String toString() {
+        return "" + this;
+    }
 }

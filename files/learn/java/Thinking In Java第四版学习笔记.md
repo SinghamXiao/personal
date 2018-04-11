@@ -576,7 +576,7 @@
            
             ListIterator 作为List特有的迭代器，具有双向移动功能，其对应方法为hasPrevious()，previous()，使用add()添加元素，set()修改最后一个访问的元素。
             
-        3. 栈.
+        3. 栈
            
            后进先出，通常可以使用LinkedList来实现Stack的功能。
            
@@ -591,10 +591,54 @@
         6. foreach语法用于任何实现了Iterable接口的类。Collection接口扩展了Iterable接口，所以所有Collection对象都适用foreach语法。实现Collection就意味着需要提供iterator()方法。
         
         
+    十二、通过异常处理错误
+    
+        1. 异常使用指南
         
+            1）在恰当的级别处理问题（只在知道如何处理异常的时候才捕获异常）。
+            
+            2）解决问题并且重新调用产生异常的方法。
+            
+            3）进行少许修补，然后绕过异常发生的地方继续执行。
+            
+            4）用别的数据进行计算，以代替异方法预计会返回的值。
+            
+            5）把当前运行环境下能做的事情尽量做完，然后将相同的异常重抛到更高层。
+            
+            6）把当前运行环境下能做的事情尽量做完，然后将不同的异常重抛到更高层。
+            
+            7）终止程序。
+            
+            8）进行简化。
+            
+            9）让类库和程序更安全。
+
+    十三、字符串
     
-    
-    
+        1. String对象是不可变的。String类中每个看起来会修改String值的方法，实际上都是创建了一个全新的String对象，以包含修改后的字符串内容。而最初的String对象则丝毫未动。
+        
+        2. 用于String的“+”与“+=”是Java中仅有的两个重载过的运算符，Java不允许程序员重载任何运算符。
+        
+        3. String的不可变性带来了一定的效率问题，比如String的“+”运算，每“+”一次都会生成一个新的String对象。Java编译器一般会自动优化，但不同情况下，优化的程度不够。
+        
+        4. StringBuffer的内部实现方式和String不同，StringBuffer在进行字符串处理时，不生成新的对象，在内存使用上要优于String类。所以在实际使用时，如果经常需要对一个字符串进行修改，例如插入、删除等操作，使用StringBuffer要更加适合一些。
+        
+        5. 无意识的递归
+        
+            由String对象后面跟着一个“+”，再后面的对象不是String时，编译器会使后面的对象通过toString()自动类型转换成String，如果这发生在自定义的类的重写的toString()方法体内，就有可能发生无限递归，运行时抛出java.lang.StackOverflowError栈溢出异常。
+            
+            public class InfiniteRecursion{
+                public String toString(){
+                    //应该调用Object.toString()方法，所以此处应为super.toString()。
+                    return " InfiniteRecursion address: " + this + "\n"; 
+                }
+                public static void main(String[] args){
+                    List<InfiniteRecursion> v = new ArrayList<InfiniteRecursion>();
+                    for(int i = 0; i < 10; i++)
+                        v.add(new InfiniteRecursion());
+                    System.out.println(v);
+                }
+            }
     
     
     
