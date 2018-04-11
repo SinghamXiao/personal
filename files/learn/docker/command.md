@@ -17,3 +17,5 @@ docker attach --sig-proxy=false mariadb
 
 docker logs -f -t --since="2017-05-31" --tail=10 mariadb
 
+docker build -t docker/test .
+docker run -it docker/test:latest /bin/bash

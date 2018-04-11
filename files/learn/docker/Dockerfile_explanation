@@ -54,10 +54,10 @@ COPY zip.tar /myzip
 #and will override all elements specified using CMD. This allows arguments to be passed to the entry point, i.e., docker run <image> -d will pass the -d argument to the entry point.
 #Only the last ENTRYPOINT instruction in the Dockerfile will have an effect.
 
-#				No ENTRYPOINT			ENTRYPOINT exec_entry p1_entry 	ENTRYPOINT [“exec_entry”, “p1_entry”]
-#No CMD				error, not allowed 		/bin/sh -c exec_entry p1_entry 	exec_entry p1_entry
-#CMD [“exec_cmd”, “p1_cmd”]	exec_cmd p1_cmd 		/bin/sh -c exec_entry p1_entry 	exec_entry p1_entry exec_cmd p1_cmd
-#CMD [“p1_cmd”, “p2_cmd”]	p1_cmd p2_cmd 			/bin/sh -c exec_entry p1_entry 	exec_entry p1_entry p1_cmd p2_cmd
+#                           No ENTRYPOINT			    ENTRYPOINT exec_entry p1_entry 	ENTRYPOINT [“exec_entry”, “p1_entry”]
+#No CMD                     error, not allowed 		    /bin/sh -c exec_entry p1_entry 	exec_entry p1_entry
+#CMD [“exec_cmd”, “p1_cmd”]	exec_cmd p1_cmd 		    /bin/sh -c exec_entry p1_entry 	exec_entry p1_entry exec_cmd p1_cmd
+#CMD [“p1_cmd”, “p2_cmd”]	p1_cmd p2_cmd 			    /bin/sh -c exec_entry p1_entry 	exec_entry p1_entry p1_cmd p2_cmd
 #CMD exec_cmd p1_cmd		/bin/sh -c exec_cmd p1_cmd 	/bin/sh -c exec_entry p1_entry 	exec_entry p1_entry /bin/sh -c exec_cmd p1_cmd
 
 #The VOLUME instruction creates a mount point with the specified name and marks it as holding externally mounted volumes from native host or other containers.
