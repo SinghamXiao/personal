@@ -447,8 +447,7 @@
 
 	说明：docker registry服务默认会将上传的镜像保存在容器的/var/lib/registry目录下，这里我们将其映射到本机的/opt/registry目录
 
-  
-	 docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p 10.200.176.60:5000:5000 -v /opt/docker/registry/auth/:/auth/  -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --privileged=true --restart=always --name registry registry:latest
+	docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p 10.200.176.60:5000:5000 -v /opt/docker/registry/auth/:/auth/  -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --privileged=true --restart=always --name registry registry:latest
 
 	6、测试私有docker registry镜像库在本机和其他机器是否可用
 	

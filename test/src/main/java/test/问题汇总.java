@@ -1,3 +1,4 @@
+/*
 package main.java.test;
 
 import com.derbysoft.common.util.collect.Lists;
@@ -5,6 +6,7 @@ import org.junit.Test;
 
 import java.util.List;
 
+*/
 /*
  * JTB 最近新功能开发的时候无意当中写了一个栈溢出的问题！！！
  *
@@ -18,7 +20,8 @@ import java.util.List;
                 : field.get(javaObject);
        }
  *
- * */
+ * *//*
+
 
 public class 问题汇总 {
 
@@ -38,6 +41,7 @@ public class 问题汇总 {
         com.alibaba.fastjson.JSON.toJSON(list); // 注意这个方法的使用！！！
     }
 
+*/
 /*  结果：
         java.lang.StackOverflowError
         at java.util.HashMap.<init>(HashMap.java:457)
@@ -58,7 +62,8 @@ public class 问题汇总 {
         ..................................................
         ..................................................
         ..................................................
-*/
+*//*
+
 
     private class TestModel1 {
 
@@ -117,4 +122,4 @@ public class 问题汇总 {
         }
     }
 
-}
+}*/
