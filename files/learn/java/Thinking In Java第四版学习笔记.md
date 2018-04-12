@@ -590,7 +590,6 @@
         
         6. foreach语法用于任何实现了Iterable接口的类。Collection接口扩展了Iterable接口，所以所有Collection对象都适用foreach语法。实现Collection就意味着需要提供iterator()方法。
         
-        
     十二、通过异常处理错误
     
         1. 异常使用指南
@@ -612,7 +611,7 @@
             8）进行简化。
             
             9）让类库和程序更安全。
-
+   
     十三、字符串
     
         1. String对象是不可变的。String类中每个看起来会修改String值的方法，实际上都是创建了一个全新的String对象，以包含修改后的字符串内容。而最初的String对象则丝毫未动。
@@ -640,7 +639,23 @@
                 }
             }
     
+        6. String.format()方法用于创建格式化的字符串以及连接多个字符串对象。
+        
+        7. 正则表达式
+        
+            ？？？
+        
+        8. 扫描输入
+        
+            ？？？
+        
+        9. StringTokenizer
+        
+            Java中substring方法可以分解字符串，返回的是原字符串的一个子字符串。如果要将一个字符串分解为一个一个的单词或者标记，StringTokenizer可以帮你。
     
+    十四、类型信息
+    
+        1. 
     
     
     
