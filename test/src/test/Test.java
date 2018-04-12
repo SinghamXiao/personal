@@ -3,7 +3,6 @@ package test;
 import main.java.H;
 
 import java.util.HashMap;
-import java.util.StringTokenizer;
 
 public class Test {
 
@@ -92,7 +91,21 @@ public class Test {
 
         System.out.println("Test " + a.toString());
 
+        try {
+            Class.forName("main.java.H");
+        } catch (ClassNotFoundException e1) {
+            System.out.println(e1.getCause());
+        }
+        Class<H> hClass = H.class;
 
+        try {
+            H instance = hClass.newInstance();
+            instance.getClass();
+        } catch (InstantiationException e1) {
+            e1.printStackTrace();
+        } catch (IllegalAccessException e1) {
+            e1.printStackTrace();
+        }
     }
 
 

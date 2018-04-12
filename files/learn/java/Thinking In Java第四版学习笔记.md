@@ -655,9 +655,236 @@
     
     十四、类型信息
     
-        1. 
-    
-    
+        1. RTTI（Runtime Type Identification）运行阶段类型识别
+            
+            在Java中，所有的类型转换都是在运行时进行正确性检查的。这也是RTTI的含义：在运行时，识别一个对象的类型。
+            
+            
+                1）多态中表现的类型转换是RTTI最基本的使用形式，但这种转换并不彻底。如数组容器实际上将所有元素当作Object持有，取用时再自动将结果转型回声明类型。
+                
+                    而数组在填充（持有）对象时，具体类型可能是声明类型的子类，这样放到数组里就会向上转型为声明类型，持有的对象就丢失了具体类型。而取用时将由Object只转型回声明类型，并不是具体的子类类型，所以这种转型并不彻底。
+            
+                2）多态中表现了具体类型的行为，但那只是“多态机制”的事情，是由引用所指向的具体对象而决定的，并不等价于在运行时识别具体类型。
+            
+            以上揭示了一个问题就是具体类型信息的丢失！有了问题，就要解决问题，这就是RTTI的需要，即在运行时确定对象的具体类型。
+
+            package net.mrliuli.rtti;
+            
+            import java.util.Arrays;
+            import java.util.List;
+            
+            /**
+             * Created by leon on 2017/12/3.
+             */
+            
+            abstract class Shape{
+                void draw(){
+                    System.out.println(this + ".draw()");
+                }
+                abstract public String toString();  //要求子类需要实现 toString()
+            }
+            
+            class Circle extends Shape{
+                @Override
+                public String toString() {
+                    return "Circle";
+                }
+                public void drawCircle(){}
+            }
+            
+            class Square extends Shape{
+                @Override
+                public String toString() {
+                    return "Square";
+                }
+            }
+            
+            class Triangle extends Shape{
+                @Override
+                public String toString() {
+                    return "Triangle";
+                }
+            }
+            
+            public class Shapes {
+                public static  void main(String[] args){
+                    List<Shape> shapeList = Arrays.asList(
+                            new Circle(), new Square(), new Triangle()  // 向上转型为 Shape，此处会丢失原来的具体类型信息！！对于数组而言，它们只是Shape类对象！
+                    );
+                    for(Shape shape : shapeList){
+                        shape.draw();   // 数组实际上将所有事物都当作Object持有，在取用时会自动将结果转型回声明类型即Shape。
+                    }
+                    //shapeList.get(0).drawCircle(); //这里会编译错误：在Shape类中找不到符号drawCircle()，证实了具体类型信息的丢失!!
+                }
+            }
+            
+        2. RTTI在Java中的工作原理
+           
+            要能够在运行时识别具体类型，说明必然有东西在运行时保存了具体类型信息，这个东西就是Class对象，一种特殊对象。即Class对象表示了运行时的类型信息，它包含了与类有关的信息。
+           
+                1）事实上Class对象就是用来创建类的所有的“常规”对象的。
+               
+                2）每个类都有一个Class对象。换言之，每当编写并且编译了一个新类，就会产生一个Class对象（更恰当地说，是被保存在一个同名的.class文件中）。
+               
+            也就是说，Class对象在.java文件编译成.class文件时就生成了，且就保存在这个.class文件中。
+
+        3. Class对象用来生成对象（常规对象，非Class对象）
+           
+            运行程序的JVM使用所谓的“类加载器”的子系统（class loader subsystem）通过加载Class对象（或者说.class文件）来生成一个类的对象。
+           
+                1）所有的类都是在对其第一次使用时，动态加载到JVM中的。当程序第一次使用类的静态成员时，就会加载这个类，这说明构造器也是静态方法，即使构造器前面没加static关键字。
+               
+                2）因此，Java程序在它开始运行之前并非被完全加载，其各个部分是在必须时才被加载的。（C++这种静态加载语言是很难做到的。）
+        4. 类加载器的工作（过程）
+           
+            1）首先检查一个类的Class对象（或理解.class文件）是否已被加载；
+            
+            2）如果尚未加载，默认的类加载器就会根据类名查找.class文件；
+            
+            3）一旦Class对象（.class文件）被加载了（载入内存），它就被用来创建这个类的所有对象。
+            
+            说明：
+            
+                Class对象仅在需要时才被加载，static初始化是在类加载时进行的。
+                
+                Class.forName(net.mrliuli.rtti.Gum)是Class类的一个静态成员，用来返回一个Class对象的引用（Class对象和其他对象一样，我们可以获取并操作它的引用（这也就是类加载器的工作））。
+                
+                使用这个方法时，如果net.mrliuli.rtti.Gum还没有被加载就加载它。在加载过程中，Gum的static子句被执行。
+                
+                总之，无论何时，只要你想在运行时使用类型信息，就必须首先获得对恰当的Class对象的引用。 
+
+        5. 获得Class对象引用的方法
+           
+            Class.forName()方法的作用，就是初始化给定的类。
+            
+            通过Class.forName()，就是一个便捷途径，这种方式不需要为了获得Class对象引用而持有该类型的对象。（即没有创建过或没有这个类型的对象的时候就可以获得Class对象引用。）
+            
+            如果已经有一个类型的对象，那就可以通过调用这个对象的getClass()方法来获取它的Class对象引用了。这个方法属于Object，返回表示该对象的实际类型的Class对象引用。
+        
+        6. Class包含的很多有用的方法:
+           
+            getName() 获取类的全限定名称
+            getSimpleName() 获取不含包名的类名
+            getCanonicalName() 获取全限定的类名
+            isInterface() 判断某个Class对象是否是接口
+            getInterfaces() 返回Class对象实现的接口数组
+            getSuperClass() 返回Class对象的直接基类
+            newInstance() 创建一个这个Class对象所代表的类的一个实例对象
+            
+            1）Class引用在编译期不具备任何更进一步的类型信息，所以它返回的只是一个Object引用，但是这个Object引用指向的是这个Class引用所代表的具体类型。即需要转型到具体类型才能给它发送Object以外的消息
+            
+            2）newInstance()这个方法依赖于Class对象所代表的类必须具有可访问的默认的构造函数（Nullary constructor，即无参的构造器），否则会抛出InstantiationException 或 IllegalAccessException 异常
+
+        7. 使用类字面常量.class是获取Class对象引用的另一种方法。如 FancyToy.class。建议使用这种方法。
+                       
+            编译时就会受到检查（因此不需要放到try语句块中），所以既简单又安全。根除了对forName()的调用，所以也更高效。
+            
+            类字面常量.class不仅适用于普通的类，也适用于接口、数组和基本类型。
+            
+            基本类型的包装器类有一个标准字段TYPE，它是一个引用，指向对应的基本数据类型的Class引用，即有boolean.class 等价于 Boolean.TYPE，int.class 等价于 Integer.TYPE…
+            
+            注意：
+            
+                使用.class来创建Class对象的引用时，不会自动地初始化该Class对象。但是为了产生Class引用，Class.forName()就立即进行了初始化操作。
+            
+                如果字段用static final来修饰，就是编译器常量，那么这个值不需要对该类进行初始化就能被读取。
+            
+                getClass()是Object的方法，返回class对象。
+                
+                forName()是Class类的方法，返回class对象。
+                
+                类字面常量是通过：XXX.class返回class对象。
+        
+        8. 为了使用类而做的准备工作实际包含三个步骤：
+                       
+            1）加载。这是由类加载器执行的。该步骤将查找字节码（通常在CLASSPATH所指定的路径中查找.class文件，但这并不是必须的），并从这些字节码中创建一个Class对象。
+            
+            2）链接。在链接阶段将验证类中的字节码，为静态域分配存储空间，并且如果必需的话，将解析这个类创建的对其他类的所有引用。
+            
+            3）初始化。如果该类具有超类，则对其初始化，执行静态初始化器和静态初始块。
+                
+                初始化被延迟到了对静态方法（构造器隐式地是静态的）或者非常数静态域进行首次引用时才执行，即初始化有效地实现了尽可能 的“惰性”。 
+                        
+            package net.mrliuli.rtti;
+            
+            import java.util.Random;
+            
+            class Initable{
+                static final int staticFinal = 47;      // 常数静态域
+                static final int staticFinal2 = ClassInitialization.rand.nextInt(1000);     // 非常数静态域（不是编译期常量）
+                static{
+                    System.out.println("Initializing Initable");
+                }
+            }
+            
+            class Initable2{
+                static int staticNonFinal = 147;    // 非常数静态域
+                static {
+                    System.out.println("Initializing Initable2");
+                }
+            }
+            
+            class Initable3{
+                static int staticNonFinal = 74;     // 非常数静态域
+                static {
+                    System.out.println("Initializing Initable3");
+                }
+            }
+            
+            public class ClassInitialization {
+            
+                public static Random rand = new Random(47);
+                
+                public static void main(String[] args) throws Exception {
+                    Class initalbe = Initable.class;                // 使用类字面常量.class获取Class对象引用，不会初始化
+                    System.out.println("After creating Initable ref");
+                    System.out.println(Initable.staticFinal);       // 常数静态域首次引用，不会执行初始化就可以读取
+                    System.out.println(Initable.staticFinal2);      // 非常数静态域首次引用，会初始化
+                    System.out.println(Initable2.staticNonFinal);   // 非常数静态域首次引用，会初始化
+                    Class initable3 = Class.forName("net.mrliuli.rtti.Initable3");      // 使用Class.forName()获取Class对象引用，会初始化
+                    System.out.println("After creating Initable3 ref");
+                    System.out.println(Initable3.staticNonFinal);   // 已初始化过
+                }
+            
+            }
+        
+        9. Class.forName()与ClassLoader.loadClass(className)的区别
+                    
+            装载：通过累的全限定名获取二进制字节流，将二进制字节流转换成方法区中的运行时数据结构，在内存中生成Java.lang.class对象； 
+            
+            链接：执行下面的校验、准备和解析步骤，其中解析步骤是可以选择的； 
+            
+            　　校验：检查导入类或接口的二进制数据的正确性；（文件格式验证，元数据验证，字节码验证，符号引用验证） 
+            
+            　　准备：给类的静态变量分配并初始化存储空间； 
+            
+            　　解析：将常量池中的符号引用转成直接引用； 
+            
+            初始化：激活类的静态变量的初始化Java代码和静态Java代码块，并初始化程序员设置的变量值。
+            
+            Class.forName(className)方法，内部实际调用的方法是  Class.forName(className,true,classloader);
+            
+                第2个boolean参数表示类是否需要初始化，  Class.forName(className)默认是需要初始化。
+                
+                一旦初始化，就会触发目标对象的 static块代码执行，static参数也也会被再次初始化。
+
+            ClassLoader.loadClass(className)方法，内部实际调用的方法是  ClassLoader.loadClass(className,false);
+            
+                第2个 boolean参数，表示目标对象是否进行链接，false表示不进行链接。不进行链接意味着不进行包括初始化等一些列步骤，那么静态块和静态对象就不会得到执行。
+        
+        10. 泛化的Class引用
+        
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
     
     
