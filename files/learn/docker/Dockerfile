@@ -18,10 +18,10 @@ COPY test.tar.xz /home/test
 
 ADD test.tar.xz /home/test
 
-ADD DockerTest .
+ADD dockerTest .
 
 RUN ["ls", "-al"]
 
 CMD ["test"]
 
-ENTRYPOINT ["./DockerTest"]
+ENTRYPOINT ["./dockerTest"]
