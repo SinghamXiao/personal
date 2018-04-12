@@ -19,3 +19,6 @@
 2018-04-10
 1、Trust问题处理
 2、Dockerfile学习和总结
+2018-04-11
+1、Trust问题处理
+2、Dockerfile学习和总结
