@@ -11,6 +11,8 @@ ask_yes_or_no() {
 clean() {
     docker rm `docker ps -a | grep Exited | awk '{print $1}'`
 
+    docker container prune
+
     docker rmi docker/test:latest
 }
 
