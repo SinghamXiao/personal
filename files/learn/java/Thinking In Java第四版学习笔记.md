@@ -1173,9 +1173,201 @@
         
     十八、Java I/O系统    
         
+        1. File类
         
+            File（文件）类这个名字有一定的误导性；我们可能会认为它指代的是文件，实际上却并非如此。它既能代表一个特定文件的名称，又能代表一个目录下的一组文件的名称。实际上，FilePath（文件路径）对这个类来说是更好的名字。
+
+            如果它指的是一个文件集，我们就可以对此集合调用list()方法，这个方法会返回一个字符串数组。
+            
+        2. 输入和输出（Input an output）
+           
+            编程语言的I/O类库常使用流这个抽象概念，它代表任何有能力产出数据的数据源对象或者是有能力接收数据的接收对象。“流”屏蔽了实际的I/O设备中处理数据的细节。
+            
+            InputStream或Reader中的read()用于读取单个字节或者字节数组，OutputStream或Writer中的write()用于写单个字节或者字节数组。
+            
+            2.1 InputStream类型
+            
+                InputStream的作用是用来表示那些从不同数据源产生输入数据的类。每一种数据源都有相应的InputStream子类。这些数据源包括：
+            
+                    字节数组 -- new ByteArrayInputStream(bytes)
+                    
+                    String对象 -- new ByteArrayInputStream("Hello".getBytes("UTF-8"))
+                    
+                    文件 -- new FileInputStream(fileName)
+                    
+                    “管道”（A pipe），工作方式与实际管道相似，即，从一端输入，从另一端输出 -- new PipedInputStream()
+                    
+                    一个由其他种类的流组成的序列，以便我们可以将它们收集合并到一个流内 -- new SequenceInputStream()
+                    
+                    其他数据源，如Internet连接等 -- new FilterInputStream()
+            
+            2.2 OutputStream类型
+            
+              OutputStream类决定了输出所要去往的目标：
+            
+                字节数组 -- new ByteArrayOutputStream()
+                
+                文件 -- new FileOutputStream()
+                
+                管道 -- new PipedOutputStream()
+                
+                其他 -- new FilterOutputStream()
+
+        3. 添加属性和有用接口
+           
+            FilterInputStream和FilterOutputStream是用来提供装饰器类接口以控制特定输入流（InputStream）和输出流（OutputStream）的两个类，它们的名字并不直观。这两个类是装饰器的必要条件（以便能为所有正在被修饰的对象提供通用接口）。                
+            
+            FilterInputStream
+                
+                DataInputStream
+                
+                BufferedInputStream
+                
+                PushbackInputStream
+            
+            FilterOutputStream
+            
+                DataOutputStream
+                
+                BufferedOutputStream
+                
+                PrintStream
+                
+        4. Reader和Writer
+                       
+            InputStream和OutputStream面向字节形式的I/O提供功能。
+            
+            Reader和Writer面向字符（兼容Unicode）形式的I/O功能。
+
+        5. 自我独立的类：RandomAccessFile
+                       
+            RandomAccessFile适用于由大小已知的记录组成的文件，所以我们可以使用seek()将记录从一处转移到另一处，然后读取或者修改记录。
+            
+            RandomAccessFile拥有和别的I/O类型本质不同的行为，因为我们可以在一个文件 内向前和向后移动。在任何情况下，它都是自我独立的，直接从Object派生而来。
+            
+        6. I/O流的典型使用方式（Typical uses of I/O streams）
+            
+            缓冲输入文件（Buffered input file）
+            
+            从内存输入（Input from memory）
+            
+            格式化的内存输入（Formatted memory input）
+            
+            基本的文件输出（Basic file output）
+            
+            存储和恢复数据（Storing and recovering data）
+            
+            读写随机访问文件（Reading and writing random-access files）
+            
+            管道流（PipedStreams）
+        
+        7. 压缩
+        
+            CheckedInputStream
+            
+            CheckedOutputStream
+                                    
+            InflaterInputStream
+            
+            InflaterOutputStream
+            
+            DeflaterInputStream
+            
+            DeflaterOutputStream
+                       
+            ZipInputStream
+            
+            ZipOutputStream
+            
+            GZIPInputStream
+            
+            GZIPOutputStream
+
+        9. 对象序列化（Object serialization）
+           
+            Java的对象序列化将那些实现了Serilizable接口的对象转换成一个字节序列，并能够在以后将这个字节序列完全恢复为原来的对象。这一过程甚至可通过网络进行，这意味着序列化机制能自动弥补不同操作系统之间的差异。
+            
+            就其本身来说，对象的序列化是非常有趣的，因为利用它可以实现轻量级持久性（ligthweight persistence）。持久性意味着一个对象的生存周期并不取决于程序是否正在执行，它可以生存于程序的调用之间。
+            
+            对象序列化的概念加入到语言中是为了支持两种主要特性：
+            
+                一是Java的远程方法调用（Remote Method Invocation, RMI），它使存活于其他计算机的对象使用起来就像是存活于本机上一样。当向远程对象发送消息时，需要通过对象序列化来传输参数和返回值。
+                
+                再者，对Java Beans来说，对象的序列化也是必需的。使用一个Bean时，一般情况下是在设计阶段对它的状态信息进行配置。这种状态信息必须保存下来，并在程序启动时进行后期恢复；这种具体工作就是由对象序列化完成的。
+            
+            序列化一个对象和反序列化：
+            
+                首先要创建一个ObjectOutputStream对象，要通过构造函数含有一个 OutputStream 对象。
+                
+                然后，只需调用 void writeObject(Object obj)，即可将对象obj序列化，即转换成字节序列输出到第一步所说的Outputstream。
+                
+                反序列化，即将字节序列还原为一个对象，则只需调用ObjectInputStream的Object readObject()，输入到一个InputStream。
+            
+            寻找类
+            
+                反序列，即将字节序列还原为对象时，必须保证Java虚拟机能够找到要还原的对象的相关.class文件，否则抛出java.lang.ClassNotFoundException异常。
+            
+            序列化的控制
+            
+                如果只希望一个对象的某些信息序列化而某些信息不序列化，即进行序列化控制，可使用Externalizable接口。 
+                
+                Externalizable接口继承自Serializable接口，有两个方法如下，这两个方法会在序列化和反序列化过程中被自动调用。
+                
+                    void writeExternal(ObjectOutput obj)，在该方法内部只对所需部分进行显式序列化。
+                    
+                    void readExternal(ObjectInput in)
+            
+            Externalizable接口与Serializable接口区别：
+            
+                Externalizable只序列化writeExternal()中的部分，而Serializable自动地全部序列化。
+                
+                Externalizable在反序列化时（即调用readObject()时），会首先调用所有普通的默认构造器，然后调用readExternal()。
+                
+                Serializable在反序列化时，对象完全以它存储的二进制位为基础来构造，而不用调用构造器。
+
+            transient（瞬时）关键字
+            
+                如果我们正操作的是一个Serializable对象，那么所有序列化操作都会自动进行。为了能够予以控制，可以用transient（瞬时）关键字逐个字段地关闭序列化，它的意思是“不用麻烦你保存或恢复数据——我会自己处理的”。
+            
+                由于Externalizable对象在默认情况下不保存任何字段，所以transient关键字只能和Serializable对象一起使用。
+
+            序列化的持久性
+            
+                我们可以通过一个字节数组来使用对象序列化，从而实现对任何可Serializable对象的“深度复制”（deep copy）——深度复制意味着我们复制的是整个对象网，而不仅仅是基本对象及其引用。
+            
+                一个对象被序列化在单一流中，就可以恢复出与我们写出时一样的对象网，并且没有任何意外重复复制出的对象。
+                
+                一个对象被序列化在不同流中，再从不同流恢复时，得到的对象地址不同。
+
+            注意：对象序列化的一个重要限制是它只是Java的解决方案：只有Java程序才能反序列化这种对象。一种更具互操作性的解决方案是将数据转换为XML格式，这可以使其被各种各样的平台语言使用。
+                        
+        10. Preferences
+        
+            对一款人性化的应用来说，往往需要存储用户的偏好设置，例如字体大小、应用风格等个性化的设置数据。
+            
+            Java应用具有跨平台的特性，就更需要一种平台无关的存储手段。Java官方给出的解决方案是Preferences首选项。
+            
+            Preferences的中文意思即偏好或喜好的意思，也就是说同一个程序在每次运行完后，可以通过Preferences来记录用户的偏好，下次启动时，程序会利用这些信息来了解用户的喜好。
+            
+            而这些信息在不同的操作系统中，Preferences底层的存储方式是不一样的。例如，在Windows下是将数据存储在注册表中，而在Linux下则是将数据存储在文件系统中的。
+            
+            在Preferences中，使用了树状结构来进行数据的存储，这主要是为了避免文件名冲突。我们需要知道的是，Preferences中有着两棵独立的树。一棵是用户首选项树，一棵是系统首选项树。在用户首选项树中，一般存储应用程序的个性化设置，如字体大小、字体颜色等。而系统首选项树是全局共享的，一般用来设置应用程序的配置数据。通常我们使用用户首选项树即可。
+            
+            在每棵首选项树中，存在着许多节点，我们的数据就存储在这些节点中。每个节点都有一个节点名，并且节点名可以不唯一，但是节点名中不可以包含“/”字符。同时，每个节点都有一个绝对路径名，这是唯一的。首选项树的根节点绝对路径名是“/”，它的子节点则是“/”+子节点名，其他节点的绝对路径命名方式与此类似。对根节点之外的任何一个节点来说，其绝对路径都是父节点的绝对路径+“/”+当前节点名。在每个节点对应的Preferences对象中，使用键值对的方式来存储和获取数据，这类似于HashMap的使用方式。
+        
+    十九、枚举
     
-    
+        1.     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
     
     
