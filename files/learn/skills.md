@@ -447,7 +447,7 @@
 
 	说明：docker registry服务默认会将上传的镜像保存在容器的/var/lib/registry目录下，这里我们将其映射到本机的/opt/registry目录
 
-	docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p 10.200.176.60:5000:5000 -v /opt/docker/registry/auth/:/auth/  -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --privileged=true --restart=always --name registry registry:latest
+	docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p xx.xx.xx.xx:5000:5000 -v /opt/docker/registry/auth/:/auth/  -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --privileged=true --restart=always --name registry registry:latest
 
 	6、测试私有docker registry镜像库在本机和其他机器是否可用
 	
@@ -1644,9 +1644,9 @@
 
 	sudo mkdir -p /opt/docker/rancher-server/rancher
 	
-    sudo docker run -d -v /opt/docker/rancher-server/mysql/:/var/lib/mysql/ --restart=always -p 10.200.176.60:8080:8080 --name rancher-server rancher/server:latest
+    sudo docker run -d -v /opt/docker/rancher-server/mysql/:/var/lib/mysql/ --restart=always -p xx.xx.xx.xx:8080:8080 --name rancher-server rancher/server:latest
 	
-    sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.10 http://10.200.176.60:8080/v1/scripts/DE0544F517864A6E9BEB:1514678400000:AwlUaqJLI2cqF9p1i7JElJ0CI00
+    sudo docker run -e CATTLE_AGENT_IP="xx.xx.xx.xx"  --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.10 http://xx.xx.xx.xx:8080/v1/scripts/DE0544F517864A6E9BEB:1514678400000:AwlUaqJLI2cqF9p1i7JElJ0CI00
 
 	参考：
 	http://www.linuxidc.com/Linux/2016-04/130603.htm
@@ -1700,6 +1700,7 @@
     www.cnblogs.com/itech/archive/2009/04/10/1433052.html
 	
 ** 46、Linux下硬链接和软链接的区别和用法**
+    
     APT
     # make sure you have 'apt-transport-https' installed
     dpkg -s apt-transport-https > /dev/null || bash -c "sudo apt-get update; sudo apt-get install apt-transport-https -y"
@@ -1739,8 +1740,11 @@
     参考：
     https://www.w3cschool.cn/docker/docker-install-tomcat.html
 	
-	
-	
+** 49、portainer/portainer安装**
+    
+    docker pull portainer/portainer
+    
+    sudo docker run -d -p xx.xx.xx.xx:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/docker/portainer:/data --name portainer portainer/portainer
 	
 	
 	
