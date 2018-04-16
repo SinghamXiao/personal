@@ -181,7 +181,7 @@
 	
 	参考资料：
 	
-	    1. http://c-nergy.be/blog/?p=11336
+	    1. http://c-nergy.be/blog/?p=11336[xRDP – How to Install on Ubuntu 17.10 -Manual Installation]
 
 **5、安装subversion/git**
 
