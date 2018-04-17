@@ -2,9 +2,9 @@
 
     1、Thinking In Java第四版
     
-    2、Java核心技术卷I（原书第9版）
+    2、Effective Java第二版
     
-    3、Effective Java第二版
+    3、Java核心技术卷I（原书第9版）
     
     4、Java核心技术卷II（原书第9版）
     
