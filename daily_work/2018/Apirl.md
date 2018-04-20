@@ -41,3 +41,8 @@
 1、Effective Java学习
 2、FlightCentre web页面添加
 3、Trust-Storage Perf-Log标准化
+2018-04-19
+1、Effective Java学习
+2、FlightCentre web页面添加
+3、Trust-Storage Perf-Log标准化
+4、项目监控培训
