@@ -46,3 +46,8 @@
 2、FlightCentre web页面添加
 3、Trust-Storage Perf-Log标准化
 4、项目监控培训
+2018-04-20
+1、Trust-Storage Perf-Log标准化
+2、Dockerfile培训
+2018-04-21 -- 2018-04-22
+1、周末
