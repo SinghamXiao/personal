@@ -330,10 +330,10 @@
 
 	docker rmi imageID
 
-    docker run -e MYSQL_ROOT_PASSWORD=root -v /opt/docker/mysql/data:/var/lib/mysql -v /opt/docker/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -p 127.0.0.1:3306:3306 --restart=always --name mysql -d mysql:latest
+    docker run -e MYSQL_ROOT_PASSWORD=root -v /opt/docker/mysql/data:/var/lib/mysql -v /opt/docker/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf -p 127.0.0.1:3307:3306 --restart=always --name mysql -d mysql:latest
 	docker exec -it  mysql1 bash
 	
-    docker run -e MYSQL_ROOT_PASSWORD=derbysoft -v /opt/docker/mariadb/data:/var/lib/mysql -v /opt/docker/mariadb/my.cnf:/etc/mysql/my.cnf -p 127.0.0.1:3307:3306  --restart=always --name mariadb -d mariadb:5.5.57
+    docker run -e MYSQL_ROOT_PASSWORD=derbysoft -v /opt/docker/mariadb/data:/var/lib/mysql -v /opt/docker/mariadb/my.cnf:/etc/mysql/my.cnf -p 127.0.0.1:3306:3306  --restart=always --name mariadb -d mariadb:5.5.57
     
 	docker export <CONTAINER ID> > /home/export.tar
 
