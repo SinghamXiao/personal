@@ -2,14 +2,26 @@ package test;
 
 import main.java.H;
 
+import java.util.Date;
 import java.util.HashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Test {
 
     String f;
 
+    private AtomicInteger num = new AtomicInteger(0);
+
     public Test() {
         super();
+    }
+
+    public int testAdd() {
+        return num.incrementAndGet();
+    }
+
+    public int testSub() {
+        return num.decrementAndGet();
     }
 
     @Override
@@ -19,10 +31,28 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < args.length; i++) {
-            System.out.println(args[i]);
+        final Test test = new Test();
+        for (int i = 0; i < args.length + 10; i++) {
+            new Thread() {
+                public void run() {
+                    System.out.println(new Date().getTime() + Thread.currentThread().getName() + ": " + test.testAdd());
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(new Date().getTime() + Thread.currentThread().getName() + ": " + test.testSub());
+                }
+            }.start();
+
         }
 
+
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ClassLoader loader = Thread.currentThread().getContextClassLoader();
         System.out.println(loader);
         System.out.println(loader.getParent());
