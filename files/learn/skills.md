@@ -443,12 +443,14 @@
 
 	5、由本地registry:latest镜像启动运行docker registry容器
 
-	mkdir /opt/registry
+	mkdir /opt/docker/registry
 
-	说明：docker registry服务默认会将上传的镜像保存在容器的/var/lib/registry目录下，这里我们将其映射到本机的/opt/registry目录
+	说明：docker registry服务默认会将上传的镜像保存在容器的/var/lib/registry目录下，这里我们将其映射到本机的/opt/docker/registry目录
 
 	docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p xx.xx.xx.xx:5000:5000 -v /opt/docker/registry/auth/:/auth/  -e "REGISTRY_AUTH=htpasswd" -e "REGISTRY_AUTH_HTPASSWD_REALM=Registry Realm" -e REGISTRY_AUTH_HTPASSWD_PATH=/auth/htpasswd --privileged=true --restart=always --name registry registry:latest
 
+    docker run -d -v /opt/docker/registry/:/var/lib/registry/ -p 127.0.0.1:5000:5000 --privileged=true --restart=always --name registry registry:latest
+    
 	6、测试私有docker registry镜像库在本机和其他机器是否可用
 	
 	7、报错解决办法：
@@ -459,11 +461,11 @@
 
 	1. Create or modify /etc/docker/daemon.json
 
-	echo '{ "insecure-registries":["10.10.239.222:5000"] }' > /etc/docker/daemon.json
+	echo '{ "insecure-registries":["127.0.0.1:5000"], "registry-mirrors": ["http://786573aa.m.daocloud.io"] }' > /etc/docker/daemon.json
 	
 	cat /etc/docker/daemon.json
 	
-	{ "insecure-registries":["10.10.239.222:5000"] }
+	{ "insecure-registries":["127.0.0.1:5000"], "registry-mirrors": ["http://786573aa.m.daocloud.io"] }
 	
 	2. 重载docker
 	
@@ -471,23 +473,27 @@
 
 	本机测试：
 
-	docker tag docker.io/registry:latest docker registry服务器IP:5000/docker.io/registry:latest
+	docker tag docker.io/registry:latest IP:5000/docker.io/registry:latest
 
-	docker push docker registry服务器IP:5000/docker.io/registry:latest
+	docker push IP:5000/docker.io/registry:latest
 
-	docker rmi   docker registry服务器IP:5000/docker.io/registry:latest
+	docker rmi IP:5000/docker.io/registry:latest
 
-	docker pull  docker registry服务器IP:5000/docker.io/registry:latest
+	docker pull IP:5000/docker.io/registry:latest
 
 	其他机器测试：
 
-	docker pull   docker registry服务器IP:5000/docker.io/registry:latest
+	docker pull IP:5000/docker.io/registry:latest
 
-	docker tag   docker registry服务器IP:5000/docker.io/registry:latest docker registry服务器IP:5000/test/registry:latest
+	docker tag IP:5000/docker.io/registry:latest
+	 
+	docker registry服务器IP:5000/test/registry:latest
 
-	docker push docker registry服务器IP:5000/test​/registry:latestdocker rmi   docker registry服务器IP:5000/test/registry:latest
+	docker push IP:5000/test​/registry:latest
+	
+	docker rmi IP:5000/test/registry:latest
 
-	docker pull  docker registry服务器IP:5000/test/registry:latest
+	docker pull IP:5000/test/registry:latest
 	
 	参考：
 	https://docs.docker.com/
@@ -1744,10 +1750,13 @@
     
     docker pull portainer/portainer
     
-    sudo docker run -d -p xx.xx.xx.xx:9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/docker/portainer:/data --name portainer portainer/portainer
+    sudo docker run -d -p xx.xx.xx.xx:9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /opt/docker/portainer:/data --restart=always --name portainer portainer/portainer
 	
-	
-	
+** 50、Humpback安装**
+    
+    docker run -d --net=host -e HUMPBACK_LISTEN_PORT=8000 -v /opt/docker/humbback/humpback-web/dbFiles:/humpback-web/dbFiles --restart=always --name humpback-web humpbacks/humpback-web:1.3.0
+    
+    docker run -d -ti --net=host -e DOCKER_API_VERSION=v1.37 -e DOCKER_CLUSTER_ENABLED=false -v /var/run/:/var/run/:rw --restart=always --name=humpback-agent humpbacks/humpback-agent:1.3.0
 	
 	
 	

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<p>点击按钮执行 <em>displayDate()</em> 函数.</p>
+<button onclick='displayDate(this)'>点这里</button>
+<script>
+    var f = false;
+
+    function displayDate(element) {
+        f = !f;
+        if (f) element.innerHTML = Date();
+        else element.innerHTML = "点这里";
+    }
+</script>
+<p id="demo"></p>
+
+</body>
+</html>
