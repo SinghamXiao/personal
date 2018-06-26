@@ -18,3 +18,31 @@
 1、周末
 2018-06-11
 1、Marriott CancelPolicy转换
+2018-06-12
+1、Marriott MakeReservation编码
+2018-06-13
+1、Marriott MakeReservation编码
+2018-06-14
+1、Marriott MakeReservation编码
+2018-06-15
+1、Marriott MakeReservation编码
+2018-06-16 -- 2018-06-17
+1、周末
+2018-06-18
+1、Marriott MakeReservation编码
+2018-06-19
+1、Marriott MakeReservation编码
+2018-06-20
+1、Marriott CancelReservation编码
+2018-06-21
+1、Marriott CancelReservation编码
+2018-06-22
+1、Marriott CancelReservation编码
+2、JTBProvider问题排查
+2018-06-23 -- 2018-06-24
+1、周末
+2018-06-25
+1、Marriott Json API stream log
+2018-06-26
+1、Marriott Json API stream log
+2、Trust问题排查和GDPR
