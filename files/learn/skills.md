@@ -208,6 +208,8 @@
 	sudo dpkg --get-selections | grep hold
 
 	sudo apt-get install git
+	
+	sudo apt-get install tree
 
 **6、安装vim**
 
